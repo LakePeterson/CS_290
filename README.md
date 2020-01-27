@@ -1,4 +1,4 @@
-# CS 290
+# CS 290 Web Development
 
 This repository is an archive of all the programming assignments for CS 290 at Oregon State University taken fall quarter 2019, taught by Rob Hess.
 
