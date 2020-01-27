@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>{{Title}}</title>
+
+  	<link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/Cyborg.bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.runtime.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src='/movieCard.js'></script>
+  	<script type='text/javascript' src='/config.js'></script>
+  	<script type='text/javascript' src='/index.js' defer></script>
+
+  </head>
+
+  <header>
+    <div class="header-image-container">
+      <img src="HeaderFlixLogo.png" alt="Header Cartoon Movie Camera">
+    </div>
+  </header>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="logo-image-container">
+      <img src="/FlixLogo.png" alt="Cartoon Movie Camera">
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Decade</a>
+            <div class="dropdown-menu" style="">
+              <button class="dropdown-item" id="dropdown-decade-2010" type="button">2010 - 19</button>
+              <button class="dropdown-item" id="dropdown-decade-2000" type="button">2000 - 09</button>
+              <button class="dropdown-item" id="dropdown-decade-1990" type="button">1990 - 99</button>
+              <button class="dropdown-item" id="dropdown-decade-1980" type="button">1980 - 89</button>
+              <button class="dropdown-item" id="dropdown-decade-1970" type="button">1970 - 79</button>
+              <button class="dropdown-item" id="dropdown-decade-1960" type="button">1960 - 69</button>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Genre</a>
+            <div class="dropdown-menu" style="">
+              <button class="dropdown-item" id="dropdown-genre-action" type="button">Action</button>
+              <button class="dropdown-item" id="dropdown-genre-adventure" type="button">Adventure</button>
+              <button class="dropdown-item" id="dropdown-genre-comedy" type="button">Comedy</button>
+              <button class="dropdown-item" id="dropdown-genre-crime" type="button">Crime</button>
+              <button class="dropdown-item" id="dropdown-genre-drama" type="button">Drama</button>
+              <button class="dropdown-item" id="dropdown-genre-family" type="button">Family</button>
+              <button class="dropdown-item" id="dropdown-genre-history" type="button">History</button>
+              <button class="dropdown-item" id="dropdown-genre-horror" type="button">Horror</button>
+              <button class="dropdown-item" id="dropdown-genre-mystery" type="button">Mystery</button>
+              <button class="dropdown-item" id="dropdown-genre-romance" type="button">Romance</button>
+              <button class="dropdown-item" id="dropdown-genre-thriller" type="button">Thriller</button>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rated</a>
+            <div class="dropdown-menu" style="">
+              <button class="dropdown-item" id="dropdown-rated-g" type="button">G</button>
+              <button class="dropdown-item" id="dropdown-rated-pg" type="button">PG</button>
+              <button class="dropdown-item" id="dropdown-rated-pg13" type="button">PG - 13</button>
+              <button class="dropdown-item" id="dropdown-rated-r" type="button">R</button>
+              <button class="dropdown-item" id="dropdown-rated-nc-17" type="button">NC - 17</button>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Metascore</a>
+            <div class="dropdown-menu" style="">
+              <button class="dropdown-item" id="dropdown-metascore-90" type="button">90 - 100</button>
+              <button class="dropdown-item" id="dropdown-metascore-80" type="button">80 - 89</button>
+              <button class="dropdown-item" id="dropdown-metascore-70" type="button">70 - 79</button>
+              <button class="dropdown-item" id="dropdown-metascore-60" type="button">60 - 69</button>
+              <button class="dropdown-item" id="dropdown-metascore-50" type="button">50 - 59</button>
+              <button class="dropdown-item" id="dropdown-metascore-40" type="button">40 - 49</button>
+              <button class="dropdown-item" id="dropdown-metascore-30" type="button">30 - 39</button>
+              <button class="dropdown-item" id="dropdown-metascore-20" type="button">20 - 29</button>
+              <button class="dropdown-item" id="dropdown-metascore-10" type="button">10 - 19</button>
+              <button class="dropdown-item" id="dropdown-metascore-0" type="button"> 0 - 9 </button>
+            </div>
+
+        </ul>
+
+        <div class="form-inline my-2 my-lg-0">
+          <input id="search-box"class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button id="search-button"class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </div>
+      </div>
+    </nav>
+
+  {{{body}}}
+
+  </body>
+</html>

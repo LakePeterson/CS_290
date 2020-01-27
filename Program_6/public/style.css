@@ -1,0 +1,78 @@
+header
+{
+  background-color: #000;
+}
+
+.header-image-container img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  width: 485px;
+  height: 140px;
+}
+
+.logo-image-container img
+{
+  display: block;
+  width: 60px;
+  height: 40px;
+}
+
+#posts
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card
+{
+  height: 215px;
+  width: 160px;
+  margin-top: 2%;
+  margin-bottom: 2.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.card-contents
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.card-image-container img
+{
+  height: 215px;
+  width: 160px;
+}
+
+.card-info-container
+{
+  width: 100%;
+  margin-top: 8px;
+}
+
+.card-title
+{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 100%;
+  color: #ffffff;
+}
+
+.card-year
+{
+  display: block;
+  position: relative;
+  bottom: 12px;
+  font-size: 100%;
+  color: #4C4B4B;
+}
